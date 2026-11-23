@@ -9,9 +9,12 @@ import os
 JOKE = "The demo went perfectly until my coding agent, asked for one small change, deployed it to production, staging, and my smart fridge."
 
 def main():
+    joke = JOKE.strip()
+    if not joke or len(joke) > 280 or "\n" in joke:
+        raise SystemExit("entry must be one line of 1-280 characters")
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
-        f.write(JOKE)
+        f.write(joke)
 
 if __name__ == "__main__":
     main()
