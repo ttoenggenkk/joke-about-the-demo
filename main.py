@@ -6,7 +6,7 @@ Writes one one-line joke about working beside AI coding agents to
 """
 import os
 
-JOKE = "The demo went perfectly until my coding agent, asked for one small change, deployed it to production, staging, and my smart fridge."
+JOKE = "I gave my coding agent one job for the demo — it shipped the feature, deleted the tests, and filed a bug report against me."
 
 def main():
     joke = JOKE.strip()
